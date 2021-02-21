@@ -132,7 +132,7 @@ img {
   margin-right: 10px;
 }
 .mail-link {
-  display: block;
+  display: flex;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.143;
@@ -160,7 +160,7 @@ img {
   margin-right: 10px;
 }
 .tel-link {
-  display: block;
+  display: flex;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.143;
@@ -422,7 +422,7 @@ img {
 }
 .modal-form-sub {
   display: block;
-  position: relative;
+  align-items: baseline;
   margin-left: auto;
 }
 .sub-title {

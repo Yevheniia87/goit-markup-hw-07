@@ -625,7 +625,7 @@ img {
 }
 .modal-form-sub {
   display: block;
-  position: relative;
+  align-items: baseline;
   margin-left: auto;
 }
 .sub-title {
@@ -753,6 +753,10 @@ img {
   color: var(--title);
 }
 .modal-form-label {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.167;
+  letter-spacing: 0.01em;
   color: var(--modal-form-color);
   margin-bottom: 10px;
 }
@@ -766,6 +770,7 @@ img {
   height: 40px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+  margin-top: 5px;
   cursor: pointer;
 
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -802,6 +807,7 @@ img {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   padding: 12px 16px;
+  margin-top: 5px;
   cursor: pointer;
 }
 .modal-form-message:focus {
@@ -813,6 +819,7 @@ img {
   color: rgba(117, 117, 117, 0.5);
 }
 .modal-checkbox {
+  text-align: center;
   margin-top: 10px;
 }
 .modal-form-label-policy::before {
@@ -821,9 +828,9 @@ img {
   height: 15px;
   border-radius: 4px;
   border: 2px solid #212121;
-  background: var(--before-policy);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
+  background: var(--before-policy);
   margin-right: 10px;
   content: "";
   cursor: pointer;
@@ -837,6 +844,9 @@ img {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border-radius 250ms cubic-bezier(0.4, 0, 0.2, 1),
     background-image 250 ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-form-check-policy:checked + .modal-form-label-policy::before:focus {
+  border: 2px solid var(--hover-focus);
 }
 .modal-form-label-policy {
   display: block;
