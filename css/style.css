@@ -148,7 +148,7 @@ img {
   color: var(--color-item-page);
 }
 .mail-list-icon {
-  display: flex;
+  align-items: baseline;
   width: 16px;
   height: 12px;
   fill: var(--fill-nav-icon);
