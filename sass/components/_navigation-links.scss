@@ -4,10 +4,13 @@
   height: 12px;
   fill: var(--fill-nav-icon);
   margin-right: 10px;
-
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
 
+  .mail-link:hover &,
+  .mail-link:focus & {
+    fill: var(--hover-focus);
+  }
+}
 .mail-link {
   display: flex;
   font-weight: 500;
@@ -19,27 +22,24 @@
   padding-top: 32px;
   padding-bottom: 32px;
   color: var(--mail-tel);
-
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
 
-.mail-link:hover,
-.mail-link:focus {
-  color: var(--hover-focus);
+  &:hover,
+  &:focus {
+    color: var(--hover-focus);
+  }
 }
-
-.mail-link:hover .mail-list-icon,
-.mail-link:focus .mail-list-icon {
-  fill: var(--hover-focus);
-}
-
 .tel-list-icon {
   width: 10px;
   height: 16px;
   fill: var(--fill-nav-icon);
   margin-right: 10px;
-
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  .tel-link:hover &,
+  .tel-link:focus & {
+    fill: var(--hover-focus);
+  }
 }
 
 .tel-link {
@@ -51,18 +51,12 @@
   padding-top: 32px;
   padding-bottom: 32px;
   color: var(--mail-tel);
-
   transition: color 250 ms cubic-bezier(0.4, 0, 0.2, 1);
-}
 
-.tel-link:hover,
-.tel-link:focus {
-  color: var(--hover-focus);
-}
-
-.tel-link:hover .tel-list-icon,
-.tel-link:focus .tel-list-icon {
-  fill: var(--hover-focus);
+  &:hover,
+  &:focus {
+    color: var(--hover-focus);
+  }
 }
 
 .address {
@@ -73,21 +67,21 @@
   letter-spacing: 0.03em;
 }
 
-.contacts-block:not(last-child) {
-  margin-bottom: 9px;
+.contacts-block {
+  &:not(last-child) {
+    margin-bottom: 9px;
+  }
 }
-
 .contacts-list-link {
   color: var(--light-color);
-
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    color: var(--hover-focus);
+  }
 }
 
 .contacts_list {
   color: rgba(255, 255, 255, 0.6);
-}
-
-.contacts-list-link:hover,
-.contacts-list-link:focus {
-  color: var(--hover-focus);
 }

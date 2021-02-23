@@ -32,12 +32,12 @@
 .close-btn-icon {
   width: 11px;
   height: 11px;
-}
-.modal-close-btn:hover .close-btn-icon,
-.modal-close-btn:focus .close-btn-icon {
-  fill: var(--hover-focus);
 
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  .modal-close-btn:hover &,
+  .modal-close-btn:focus & {
+    fill: var(--hover-focus);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
 }
 .backdrop.is-hidden {
   opacity: 0;
@@ -78,15 +78,16 @@
   border-radius: 4px;
   margin-top: 5px;
   cursor: pointer;
-
+  padding-left: 40px;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.modal-form-input:focus {
-  outline: none;
-  border-color: var(--hover-focus);
 
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:focus {
+    outline: none;
+    border-color: var(--hover-focus);
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
 }
+
 .modal-form-input-icon {
   left: 15px;
   top: 50%;
@@ -95,12 +96,13 @@
   width: 15px;
   height: 12px;
   cursor: pointer;
-}
-.modal-form-input:focus + .modal-form-input-icon {
-  fill: var(--hover-focus);
 
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  .modal-form-input:focus + & {
+    fill: var(--hover-focus);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
 }
+
 .modal-form-message {
   font-weight: 500;
   font-size: 14px;
@@ -115,45 +117,22 @@
   padding: 12px 16px;
   margin-top: 5px;
   cursor: pointer;
+
+  &:focus {
+    outline: none;
+    border-color: var(--hover-focus);
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  &::placeholder {
+    color: rgba(117, 117, 117, 0.5);
+  }
 }
-.modal-form-message:focus {
-  outline: none;
-  border-color: var(--hover-focus);
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.modal-form-message::placeholder {
-  color: rgba(117, 117, 117, 0.5);
-}
+
 .modal-checkbox {
   text-align: center;
   margin-top: 10px;
 }
-.modal-form-label-policy::before {
-  display: inline-block;
-  width: 16px;
-  height: 15px;
-  border-radius: 4px;
-  border: 2px solid #212121;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
-  background: var(--before-policy);
-  margin-right: 10px;
-  content: "";
-  cursor: pointer;
-}
-.modal-form-check-policy:checked + .modal-form-label-policy::before {
-  background-color: var(--btn);
-  border-radius: 2px;
-  border: none;
-  background-image: url(../img/icon-check.svg);
 
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border-radius 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    background-image 250 ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.modal-form-check-policy:checked + .modal-form-label-policy::before:focus {
-  border: 2px solid var(--hover-focus);
-}
 .modal-form-label-policy {
   display: block;
   font-weight: 500;
@@ -162,6 +141,32 @@
   letter-spacing: 0.03em;
   align-items: center;
   color: var(--modal-policy);
+
+  &::before {
+    display: inline-block;
+    width: 16px;
+    height: 15px;
+    border-radius: 4px;
+    border: 2px solid #212121;
+    background: var(--before-policy);
+    margin-right: 10px;
+    content: "";
+    cursor: pointer;
+
+    .modal-form-check-policy:checked + & {
+      background-color: var(--btn);
+      border-radius: 2px;
+      border: none;
+      background-image: url(../img/icon-check.svg);
+      transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        border-radius 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        background-image 250 ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .modal-form-check-policy:focus + & {
+      box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+        0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    }
+  }
 }
 .check-link {
   color: var(--check-link);
@@ -184,13 +189,13 @@
   align-self: center;
   margin-top: 30px;
   cursor: pointer;
-}
-.modal-form-btn:hover,
-.modal-form-btn:focus {
-  background: var(--modal-btn);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border: none;
 
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    background: var(--modal-btn);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border: none;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
 }

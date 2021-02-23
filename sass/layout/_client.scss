@@ -10,7 +10,8 @@
 .client-list-item {
   width: 170px;
   height: 90px;
-}
-.client-list-item:not(:last-child) {
-  margin-right: 30px;
+
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
 }

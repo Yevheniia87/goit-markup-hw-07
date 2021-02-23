@@ -1,9 +1,10 @@
 .description {
   width: 270px;
   box-sizing: border-box;
-}
-.description:not(:last-child) {
-  margin-right: 30px;
+
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
 }
 .description-list {
   display: flex;

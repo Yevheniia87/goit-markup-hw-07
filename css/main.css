@@ -93,8 +93,7 @@ img {
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.current:hover::after,
-.current:focus::after {
+.current:hover::after, .current:focus::after {
   opacity: 1;
 }
 
@@ -104,6 +103,10 @@ img {
   margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
+}
+
+.header .container {
+  display: flex;
 }
 
 /* COMPONENTS */
@@ -161,6 +164,11 @@ img {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.mail-link:hover .mail-list-icon,
+.mail-link:focus .mail-list-icon {
+  fill: var(--hover-focus);
+}
+
 .mail-link {
   display: flex;
   font-weight: 500;
@@ -175,14 +183,8 @@ img {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.mail-link:hover,
-.mail-link:focus {
+.mail-link:hover, .mail-link:focus {
   color: var(--hover-focus);
-}
-
-.mail-link:hover .mail-list-icon,
-.mail-link:focus .mail-list-icon {
-  fill: var(--hover-focus);
 }
 
 .tel-list-icon {
@@ -191,6 +193,11 @@ img {
   fill: var(--fill-nav-icon);
   margin-right: 10px;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.tel-link:hover .tel-list-icon,
+.tel-link:focus .tel-list-icon {
+  fill: var(--hover-focus);
 }
 
 .tel-link {
@@ -205,14 +212,8 @@ img {
   transition: color 250 ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.tel-link:hover,
-.tel-link:focus {
+.tel-link:hover, .tel-link:focus {
   color: var(--hover-focus);
-}
-
-.tel-link:hover .tel-list-icon,
-.tel-link:focus .tel-list-icon {
-  fill: var(--hover-focus);
 }
 
 .address {
@@ -232,13 +233,12 @@ img {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.contacts_list {
-  color: rgba(255, 255, 255, 0.6);
+.contacts-list-link:hover, .contacts-list-link:focus {
+  color: var(--hover-focus);
 }
 
-.contacts-list-link:hover,
-.contacts-list-link:focus {
-  color: var(--hover-focus);
+.contacts_list {
+  color: rgba(255, 255, 255, 0.6);
 }
 
 .modal-button {
@@ -256,8 +256,7 @@ img {
   cursor: pointer;
 }
 
-.modal-button:hover,
-.modal-button:focus {
+.modal-button:hover, .modal-button:focus {
   background: var(--btn);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
@@ -283,9 +282,13 @@ img {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.social-list-link:hover,
-.social-list-link:focus {
+.social-list-link:hover, .social-list-link:focus {
   background-color: var(--btn);
+}
+
+.social-list-link:hover .social-list-icon,
+.social-list-link:focus .social-list-icon {
+  fill: var(--fill-list-icon);
 }
 
 .social-list-icon {
@@ -293,11 +296,6 @@ img {
   height: 20px;
   fill: var(--soc-fill);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.social-list-link:hover .social-list-icon,
-.social-list-icon:focus .social-list-icon {
-  fill: var(--fill-list-icon);
 }
 
 .client-list-link {
@@ -312,19 +310,18 @@ img {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.client-list-link:hover,
-.client-list-link:focus {
+.client-list-link:hover, .client-list-link:focus {
   border-color: var(--border-link);
-}
-
-.client-list-icon {
-  fill: var(--fill-icon);
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .client-list-link:hover .client-list-icon,
 .client-list-link:focus .client-list-icon {
   fill: var(--hover-focus);
+}
+
+.client-list-icon {
+  fill: var(--fill-icon);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-social-list-link {
@@ -336,6 +333,10 @@ img {
   align-items: center;
   border-radius: 50%;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-social-list-link:hover, .footer-social-list-link:focus {
+  background-color: var(--hover-focus);
 }
 
 .footer-social-list-icon {
@@ -351,11 +352,6 @@ img {
 
 .footer-social-list-item:not(:last-child) {
   margin-right: 10px;
-}
-
-.footer-social-list-link:hover,
-.footer-social-list-link:focus {
-  background-color: var(--hover-focus);
 }
 
 .title-benefits {
@@ -493,10 +489,6 @@ img {
   background: var(--light-color);
 }
 
-.header .container {
-  display: flex;
-}
-
 .navigation {
   display: flex;
   align-items: center;
@@ -524,8 +516,7 @@ img {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.navigation-list-link:hover,
-.navigation-list-link:focus {
+.navigation-list-link:hover, .navigation-list-link:focus {
   color: var(--hover-focus);
 }
 
@@ -712,8 +703,7 @@ img {
   border: none;
 }
 
-.modal-form-sub-btn:hover,
-.modal-form-sub-btn:focus {
+.modal-form-sub-btn:hover, .modal-form-sub-btn:focus {
   background: var(--btn);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
@@ -813,6 +803,7 @@ img {
   border-radius: 4px;
   margin-top: 5px;
   cursor: pointer;
+  padding-left: 40px;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -868,13 +859,22 @@ img {
   margin-top: 10px;
 }
 
+.modal-form-label-policy {
+  display: block;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.714;
+  letter-spacing: 0.03em;
+  align-items: center;
+  color: var(--modal-policy);
+}
+
 .modal-form-label-policy::before {
   display: inline-block;
   width: 16px;
   height: 15px;
   border-radius: 4px;
   border: 2px solid #212121;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   background: var(--before-policy);
   margin-right: 10px;
   content: "";
@@ -889,18 +889,8 @@ img {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-radius 250ms cubic-bezier(0.4, 0, 0.2, 1), background-image 250 ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-form-check-policy:checked + .modal-form-label-policy::before:focus {
-  border: 2px solid var(--hover-focus);
-}
-
-.modal-form-label-policy {
-  display: block;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.714;
-  letter-spacing: 0.03em;
-  align-items: center;
-  color: var(--modal-policy);
+.modal-form-check-policy:focus + .modal-form-label-policy::before {
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
 .check-link {
@@ -927,8 +917,7 @@ img {
   cursor: pointer;
 }
 
-.modal-form-btn:hover,
-.modal-form-btn:focus {
+.modal-form-btn:hover, .modal-form-btn:focus {
   background: var(--modal-btn);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border: none;
