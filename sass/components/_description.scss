@@ -6,9 +6,6 @@
     margin-right: 30px;
   }
 }
-.description-list {
-  display: flex;
-}
 .description-list-link {
   width: 270px;
   height: 120px;
@@ -24,7 +21,7 @@
   height: 70px;
 }
 .description-text {
-  font-weight: 500;
+  font-weight: 400;
   font-size: 14px;
   line-height: 1.714;
   letter-spacing: 0.03em;
@@ -51,7 +48,7 @@
   background: rgba(47, 48, 58, 0.8);
 }
 .specialists {
-  font-weight: 500;
+  font-weight: 400;
   font-size: 16px;
   line-height: 1.188;
   text-align: center;
@@ -59,7 +56,7 @@
   color: var(--title-spec);
 }
 .profession {
-  font-weight: normal;
+  font-weight: 400;
   font-size: 16px;
   line-height: 1.188;
   text-align: center;
